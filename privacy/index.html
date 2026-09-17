@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; ReleaseBound</title>
+<meta name="description" content="ReleaseBound Privacy Policy: what the app accesses, stores, and transmits.">
+<link rel="stylesheet" href="/releasebound-support/assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/releasebound-support/">ReleaseBound</a>
+    <nav>
+      <a href="/releasebound-support/privacy/">Privacy</a>
+      <a href="/releasebound-support/terms/">Terms</a>
+      <a href="/releasebound-support/license/">License</a>
+      <a href="/releasebound-support/disclaimer/">Disclaimer</a>
+      <a href="/releasebound-support/support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 2026-09-17</p>
+
+  <p>
+    ReleaseBound is a local-first macOS application that independently
+    verifies release-readiness facts (build, tests, source state, signing,
+    and packaging) for a software project you choose.
+  </p>
+
+  <h2>What ReleaseBound accesses</h2>
+  <p>
+    ReleaseBound only reads the project folder you explicitly authorize
+    through the macOS file picker. Access is granted under App Sandbox as
+    read-only, and is scoped to exactly that folder using a macOS
+    security-scoped bookmark. ReleaseBound cannot browse or read any other
+    location on your Mac.
+  </p>
+
+  <h2>What ReleaseBound stores locally</h2>
+  <ul>
+    <li>A security-scoped bookmark for the project folder you last authorized, stored in this app's local preferences (UserDefaults) on your Mac only.</li>
+    <li>A Verified Release Baseline ("Last Known Good") record, written as a local file inside the authorized project folder itself, so it travels with that project rather than with ReleaseBound.</li>
+    <li>Verification run output and evidence produced while checking your project, kept locally on your Mac.</li>
+  </ul>
+  <p>None of this data is transmitted anywhere by ReleaseBound.</p>
+
+  <h2>Networking</h2>
+  <p>
+    ReleaseBound's production code makes no network requests. It does not
+    call any server, upload any file, or communicate with any remote
+    service. Verification runs entirely on your Mac using local tools
+    (such as git and xcodebuild).
+  </p>
+
+  <h2>Analytics, tracking, and third parties</h2>
+  <p>
+    ReleaseBound contains no analytics SDK, no crash-reporting SDK, no
+    advertising SDK, and no other third-party tracking code. It does not
+    share data with any third party, because it does not transmit data at
+    all.
+  </p>
+
+  <h2>Accounts and purchases</h2>
+  <p>
+    ReleaseBound does not require an account, sign-in, or login. It
+    contains no purchase, subscription, or in-app payment system.
+  </p>
+
+  <h2>Support correspondence</h2>
+  <p>
+    If you contact support by email, any information you voluntarily
+    include in that message (such as your email address, message
+    content, or attachments) is received by the developer in order to
+    respond to your request. This is separate from, and not part of,
+    ReleaseBound's local-only project verification behavior described
+    above.
+  </p>
+
+  <h2>Your control over locally stored data</h2>
+  <p>
+    You can remove ReleaseBound's local preferences and the Verified
+    Release Baseline file it wrote into your project folder at any time,
+    using standard macOS tools (Finder, or deleting the app's preferences).
+    Revoking the folder authorization (for example, by choosing a
+    different project) replaces the stored bookmark; it does not delete
+    files inside your project.
+  </p>
+
+  <h2>Children's privacy</h2>
+  <p>
+    ReleaseBound is a developer tool and is not directed at children. It
+    does not knowingly collect personal information from children, because
+    it does not collect personal information from any user.
+  </p>
+
+  <h2>Security limitations</h2>
+  <p>
+    ReleaseBound is designed to fail closed: if it cannot independently
+    verify a release fact, it reports that gate as not passed rather than
+    guessing. No software can guarantee complete security or the absence
+    of defects, and this Privacy Policy is not a warranty of any kind.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If ReleaseBound's data practices change (for example, if a future
+    version adds a network-dependent feature), this Privacy Policy will be
+    updated in the app before that feature is enabled, and the "Last
+    updated" date above will change accordingly.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this Privacy Policy can be sent to
+    <a href="mailto:myskyocean2024@gmail.com">myskyocean2024@gmail.com</a>.
+  </p>
+</main>
+<footer>
+  &copy; 2026 ReleaseBound.
+</footer>
+</body>
+</html>
