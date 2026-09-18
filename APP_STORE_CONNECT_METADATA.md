@@ -1,0 +1,67 @@
+# ReleaseBound — App Store Connect Metadata
+
+Copy-ready values for App Store Connect. URLs below were confirmed live over HTTPS after GitHub Pages deployment.
+
+## App Name
+ReleaseBound
+
+## Version
+0.1.0
+
+## Promotional Text (156/170 characters)
+Build with AI. Verify independently. ReleaseBound checks build, tests, signing, packaging and evidence on your Mac, so you know what is truly ready to ship.
+
+## Keywords (96/100 characters)
+release,verification,AI,build,signing,packaging,evidence,drift,baseline,readiness,Xcode,audit,QA
+
+## Description (2564/4000 characters)
+```text
+ReleaseBound is independent release verification for AI-built software.
+
+AI coding agents can report success, but a successful agent report is not independent proof that a release is ready to ship. ReleaseBound checks the release outcome for itself, on your Mac, so you can build with AI, verify independently, and ship with confidence.
+
+ReleaseBound is not an AI code generator, coding assistant, or code reviewer. It is an independent verification layer that sits beside the tools you already use.
+
+HOW IT WORKS
+Choose a project, and ReleaseBound identifies the release candidate, runs the required gates, records evidence, and reports a single release verdict. Anything it cannot independently confirm is not treated as a pass.
+
+WHAT IT VERIFIES
+- Release candidate: verification is tied to a specific candidate of your project.
+- Required gates: build, tests, source state, signing, and packaging.
+- Evidence: the technical results behind each gate are recorded so a verdict can be inspected, not just trusted.
+- Verified baseline: keep a record of a last known verified release to compare against.
+- Drift detection: see when a candidate differs from the verified baseline in ways that matter for release.
+- Verification history: review earlier runs to see how readiness has changed.
+
+CLEAR VERDICTS
+Every run ends in an explicit verdict: NOT VERIFIED, READY, NOT READY, or BLOCKED. BLOCKED means a required fact could not be independently confirmed, so ReleaseBound does not report a pass.
+
+LOCAL-FIRST
+ReleaseBound is designed to work locally on your Mac against a project folder you choose. It does not require an account, and it contains no analytics or advertising SDKs. See the Privacy Policy for details.
+
+PLATFORM FOCUS
+The initial focus is Apple platform development (macOS and iOS projects). Verification depends on your project type and the developer tools installed on your Mac, so not every verification mode applies to every language or platform.
+
+LIMITATIONS
+ReleaseBound reports only what it can independently confirm. It does not guarantee that software is free of defects or vulnerabilities, does not eliminate release risk, and is not a legal, security, or compliance certification. The decision to release always remains yours.
+
+LINKS
+Support: https://mcleung-888.github.io/releasebound-support/support/
+Privacy Policy: https://mcleung-888.github.io/releasebound-support/privacy/
+Terms of Use: https://mcleung-888.github.io/releasebound-support/terms/
+Apple Standard EULA: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+```
+
+## URLs
+| Field | Value |
+| --- | --- |
+| Support URL | https://mcleung-888.github.io/releasebound-support/support/ |
+| Marketing URL | https://mcleung-888.github.io/releasebound-support/ |
+| Privacy Policy URL | https://mcleung-888.github.io/releasebound-support/privacy/ |
+| Terms of Use URL | https://mcleung-888.github.io/releasebound-support/terms/ |
+| EULA | https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ (Apple Standard EULA; no custom EULA) |
+
+## Copyright
+COPYRIGHT_NEEDS_PRODUCT_OWNER_CONFIRMATION
+
+No repository evidence confirms the name to use. If appropriate, the Product Owner may enter `2026 <legal name>` in App Store Connect.
