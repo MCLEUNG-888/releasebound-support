@@ -3,47 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support &mdash; ReleaseBound</title>
-<meta name="description" content="ReleaseBound Support: contact and troubleshooting information.">
+<title>ReleaseBound Support</title>
+<meta name="description" content="ReleaseBound Support: getting started, understanding verdicts, troubleshooting, and how to contact support.">
 <link rel="stylesheet" href="/releasebound-support/assets/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="wrap">
     <a class="brand" href="/releasebound-support/">ReleaseBound</a>
-    <nav>
-      <a href="/releasebound-support/privacy/">Privacy</a>
-      <a href="/releasebound-support/terms/">Terms</a>
-      <a href="/releasebound-support/license/">License</a>
-      <a href="/releasebound-support/disclaimer/">Disclaimer</a>
-      <a href="/releasebound-support/support/">Support</a>
-    </nav>
+    <nav aria-label="Primary"><a href="/releasebound-support/">Home</a><a href="/releasebound-support/support/" aria-current="page">Support</a><a href="/releasebound-support/privacy/">Privacy</a><a href="/releasebound-support/terms/">Terms</a><a href="/releasebound-support/license/">License</a><a href="/releasebound-support/disclaimer/">Disclaimer</a></nav>
   </div>
 </header>
-<main>
-  <h1>Support</h1>
+<main id="main">
+<h1>ReleaseBound Support</h1>
 
-  <div class="card">
-    <p><strong>Support Email</strong></p>
-    <p><a href="mailto:myskyocean2024@gmail.com">myskyocean2024@gmail.com</a></p>
-  </div>
+<h2>About ReleaseBound</h2>
+<p>ReleaseBound is a local-first macOS application that independently verifies release outcomes for a software project you choose. It does not take an AI agent&rsquo;s (or anyone&rsquo;s) success report at face value; it checks the release facts itself.</p>
 
-  <h2>Before you contact support</h2>
-  <ul>
-    <li>Confirm you selected the correct project folder using &ldquo;Choose Project Folder&hellip;&rdquo;.</li>
-    <li>If a previously authorized folder was moved or renamed, choose it again to refresh access.</li>
-    <li>Check that required tools (such as git and Xcode's command line tools) are installed and on your Mac.</li>
-  </ul>
+<h2>Getting started</h2>
+<ol>
+  <li>Open ReleaseBound on your Mac.</li>
+  <li>Choose the project you want to verify.</li>
+  <li>Run verification for the release candidate.</li>
+  <li>Review the verdict, the required gates, and the evidence.</li>
+</ol>
 
-  <p>
-    ReleaseBound support is handled by the developer directly. Any
-    information you voluntarily send in a support email (such as your
-    email address, message content, or attachments) is received by the
-    developer in order to respond to your request.
-  </p>
+<h2>How to select a project</h2>
+<p>Use &ldquo;Choose Project Folder&hellip;&rdquo; and pick the folder that contains your project. macOS asks you to grant access to that folder, and ReleaseBound only works with the folder you authorize. If the folder was moved or renamed after you authorized it, choose it again to refresh access.</p>
+
+<h2>How to verify a release candidate</h2>
+<p>With a project selected, start a verification run. ReleaseBound runs its required gates against your project and shows progress and results as they complete. When the run finishes you will see an overall verdict and the result of each gate.</p>
+
+<h2>Understanding verdicts</h2>
+<dl>
+  <dt>NOT VERIFIED</dt><dd>Verification has not been completed for the current candidate, so no readiness claim is made.</dd>
+  <dt>READY</dt><dd>The gates ReleaseBound currently checks were independently confirmed as passing for this candidate. This is not a guarantee of defect-free software or of App Store acceptance.</dd>
+  <dt>NOT READY</dt><dd>At least one required gate did not pass. Review the failing gate and its evidence.</dd>
+  <dt>BLOCKED</dt><dd>ReleaseBound could not independently confirm one or more required facts, so it does not report a pass. Resolve what is blocking verification and run it again.</dd>
+</dl>
+
+<h2>Key concepts</h2>
+<dl>
+  <dt>Required Gates</dt><dd>The checks a release candidate must pass, such as build, tests, source state, signing, and packaging.</dd>
+  <dt>Evidence</dt><dd>The technical results behind each gate (for example results, hashes, and related details) so a verdict can be inspected.</dd>
+  <dt>Verified Baseline</dt><dd>A record of a last known verified release, used as a reference point.</dd>
+  <dt>Drift Detection</dt><dd>Comparison of a candidate against the verified baseline to surface differences that matter for release.</dd>
+  <dt>Verification History</dt><dd>A record of earlier verification runs, so you can see how readiness has changed.</dd>
+</dl>
+
+<h2>Troubleshooting</h2>
+<h3>The project cannot be selected</h3>
+<p>Choose the project folder again using &ldquo;Choose Project Folder&hellip;&rdquo; and grant access when macOS asks. Make sure the folder still exists at the same location and that you have permission to read it.</p>
+<h3>The build gate fails</h3>
+<p>Confirm the project builds on your Mac outside ReleaseBound with the same scheme and configuration, and that Xcode and its command line tools are installed. Then review the build gate&rsquo;s evidence for the reported error.</p>
+<h3>The test gate fails</h3>
+<p>Run the project&rsquo;s tests yourself to confirm the failure, then review the test gate&rsquo;s evidence. A failing test is a real result; ReleaseBound does not ignore it.</p>
+<h3>Signing validation fails</h3>
+<p>Check that the signing identity and team configured for the project are available on your Mac and have not expired, and that the built product is signed as expected.</p>
+<h3>Packaging fails</h3>
+<p>Confirm the project can produce its distribution package with your normal tooling, then review the packaging gate&rsquo;s evidence for the specific failure.</p>
+<h3>Verification becomes BLOCKED</h3>
+<p>BLOCKED means a required fact could not be independently confirmed &mdash; for example a needed tool is missing, access to the project was lost, or a required result was unavailable. Restore access or tools, then run verification again.</p>
+<h3>Evidence cannot be produced</h3>
+<p>Check that the project folder is still authorized and accessible and that the disk has free space, then run verification again. If it persists, contact support and describe which gate was involved.</p>
+
+<h2>Privacy and local-first note</h2>
+<p>ReleaseBound is designed to work locally on your Mac. See the <a href="/releasebound-support/privacy/">Privacy Policy</a> for details.</p>
+
+<h2>Support contact</h2>
+<p>Email: <a href="mailto:myskyocean2024@gmail.com">myskyocean2024@gmail.com</a><br>
+GitHub Support / Issue Tracker: <a href="https://github.com/MCLEUNG-888/releasebound-support/issues">https://github.com/MCLEUNG-888/releasebound-support/issues</a></p>
+<p>For support requests, bug reports, or feature requests, please open an issue using the support link above, or email. Issues on GitHub are public, so do not post private source code, credentials, or personal information in them.</p>
+
+<h2>Links</h2>
+<ul>
+  <li><a href="/releasebound-support/privacy/">Privacy Policy</a></li>
+  <li><a href="/releasebound-support/terms/">Terms of Use</a></li>
+  <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a></li>
+</ul>
 </main>
 <footer>
-  &copy; 2026 ReleaseBound.
+  <nav aria-label="Footer">
+    <a href="/releasebound-support/support/">Support</a>
+    <a href="/releasebound-support/privacy/">Privacy Policy</a>
+    <a href="/releasebound-support/terms/">Terms of Use</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>
+  </nav>
+  <p>&copy; 2026 ReleaseBound. Independent release verification for AI-built software.</p>
 </footer>
 </body>
 </html>

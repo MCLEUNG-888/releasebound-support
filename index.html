@@ -3,51 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ReleaseBound</title>
-<meta name="description" content="ReleaseBound: independent release-readiness verification for macOS. Privacy, Terms, Support, Disclaimer, and License information.">
+<title>ReleaseBound — Independent release verification for AI-built software</title>
+<meta name="description" content="ReleaseBound independently verifies release outcomes — build, tests, signing, packaging, evidence, baseline and drift — for AI-built software on Apple platforms.">
 <link rel="stylesheet" href="/releasebound-support/assets/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="wrap">
     <a class="brand" href="/releasebound-support/">ReleaseBound</a>
-    <nav>
-      <a href="/releasebound-support/privacy/">Privacy</a>
-      <a href="/releasebound-support/terms/">Terms</a>
-      <a href="/releasebound-support/license/">License</a>
-      <a href="/releasebound-support/disclaimer/">Disclaimer</a>
-      <a href="/releasebound-support/support/">Support</a>
-    </nav>
+    <nav aria-label="Primary"><a href="/releasebound-support/" aria-current="page">Home</a><a href="/releasebound-support/support/">Support</a><a href="/releasebound-support/privacy/">Privacy</a><a href="/releasebound-support/terms/">Terms</a><a href="/releasebound-support/license/">License</a><a href="/releasebound-support/disclaimer/">Disclaimer</a></nav>
   </div>
 </header>
-<main>
+<main id="main">
+<section class="hero">
   <h1>ReleaseBound</h1>
   <p class="tagline">Independent release verification for AI-built software.</p>
-  <p>
-    ReleaseBound is a local-first macOS application that independently verifies
-    release-readiness facts &mdash; build, tests, source state, signing, and
-    packaging &mdash; for a software project you choose. It runs entirely on
-    your Mac and does not trust an unverified success claim from an AI agent
-    or from you: every required gate is checked against real output, and any
-    outcome other than an independently confirmed pass fails closed.
-  </p>
+  <p class="slogan">Build with AI. Verify independently. Ship with confidence.</p>
+  <p class="cta"><a class="btn" href="#how-it-works">Learn How It Works</a> <a class="btn secondary" href="/releasebound-support/support/">Get Support</a></p>
+</section>
 
-  <div class="nav-grid">
-    <a href="/releasebound-support/privacy/">Privacy Policy</a>
-    <a href="/releasebound-support/terms/">Terms of Use</a>
-    <a href="/releasebound-support/license/">License Agreement</a>
-    <a href="/releasebound-support/disclaimer/">Disclaimer</a>
-    <a href="/releasebound-support/support/">Support</a>
+<section>
+  <h2>The problem</h2>
+  <p>AI coding agents can report successful changes, but successful agent output alone is not independent proof that a release is safe to ship. A message saying &ldquo;all tests pass&rdquo; is a claim, not evidence.</p>
+  <p>ReleaseBound is an independent release verification layer. It is not an AI code generator, an AI coding assistant, or an AI code reviewer. It checks release outcomes for itself &mdash; build, tests, signing, packaging, evidence, baseline and drift, and release readiness &mdash; instead of taking anyone&rsquo;s word for it.</p>
+</section>
+
+<section id="how-it-works">
+  <h2>How it works</h2>
+  <ol class="flow">
+    <li>Project Selection</li>
+    <li>Release Candidate</li>
+    <li>Release Verdict</li>
+    <li>Required Gates</li>
+    <li>Evidence</li>
+    <li>Verified Baseline / Drift</li>
+    <li>Verification History</li>
+  </ol>
+  <p>You choose a project. ReleaseBound identifies the release candidate, runs the required gates, records evidence, and reports a single release verdict. Anything it cannot independently confirm is not treated as a pass.</p>
+</section>
+
+<section>
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><h3>Release Candidate Verification</h3><p>Verifies a specific release candidate of your project rather than a general impression of its health.</p></div>
+    <div class="card"><h3>Required Gates</h3><p>Checks the facts a release depends on, such as build, tests, source state, signing, and packaging.</p></div>
+    <div class="card"><h3>Evidence</h3><p>Records the technical results behind each gate so a verdict can be inspected, not just trusted.</p></div>
+    <div class="card"><h3>Verified Baseline</h3><p>Keeps a record of a last known verified release to compare later work against.</p></div>
+    <div class="card"><h3>Drift Detection</h3><p>Highlights when a candidate differs from the verified baseline in ways that matter for release.</p></div>
+    <div class="card"><h3>Verification History</h3><p>Keeps a history of verification runs so you can see how readiness changed over time.</p></div>
+    <div class="card"><h3>Local-first workflow</h3><p>Designed to run on your Mac against a project folder you choose. See the <a href="/releasebound-support/privacy/">Privacy Policy</a>.</p></div>
   </div>
+</section>
 
-  <h2>Support</h2>
-  <p>
-    For questions, issues, or feedback, contact
-    <a href="mailto:myskyocean2024@gmail.com">myskyocean2024@gmail.com</a>.
-  </p>
+<section>
+  <h2>Platform</h2>
+  <p>ReleaseBound&rsquo;s initial focus is Apple platform development (macOS and iOS projects). Verification capabilities depend on the project type and the tools available on your Mac; not every verification mode applies to every language or platform.</p>
+</section>
+
+<section>
+  <h2>Important limits</h2>
+  <p>ReleaseBound reports what it can independently confirm. It does not guarantee that software is free of defects or vulnerabilities, does not eliminate release risk, and is not a legal, security, or compliance certification. The decision to release always remains yours. See the <a href="/releasebound-support/disclaimer/">Disclaimer</a>.</p>
+</section>
 </main>
 <footer>
-  &copy; 2026 ReleaseBound. This site provides legal and support information only.
+  <nav aria-label="Footer">
+    <a href="/releasebound-support/support/">Support</a>
+    <a href="/releasebound-support/privacy/">Privacy Policy</a>
+    <a href="/releasebound-support/terms/">Terms of Use</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>
+  </nav>
+  <p>&copy; 2026 ReleaseBound. Independent release verification for AI-built software.</p>
 </footer>
 </body>
 </html>
