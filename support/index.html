@@ -47,9 +47,7 @@
 <dl>
   <dt>Required Gates</dt><dd>The checks a release candidate must pass, such as build, tests, source state, signing, and packaging.</dd>
   <dt>Evidence</dt><dd>The technical results behind each gate (for example results, hashes, and related details) so a verdict can be inspected.</dd>
-  <dt>Verified Baseline</dt><dd>A record of a last known verified release, used as a reference point.</dd>
-  <dt>Drift Detection</dt><dd>Comparison of a candidate against the verified baseline to surface differences that matter for release.</dd>
-  <dt>Verification History</dt><dd>A record of earlier verification runs, so you can see how readiness has changed.</dd>
+  <dt>Verified Baseline (Last Known Good)</dt><dd>A record of the most recent verified release, used as a reference point. ReleaseBound keeps only the latest baseline; it does not keep a run-by-run history.</dd>
 </dl>
 
 <h2>Troubleshooting</h2>
@@ -65,11 +63,13 @@
 <p>Confirm the project can produce its distribution package with your normal tooling, then review the packaging gate&rsquo;s evidence for the specific failure.</p>
 <h3>Verification becomes BLOCKED</h3>
 <p>BLOCKED means a required fact could not be independently confirmed &mdash; for example a needed tool is missing, access to the project was lost, or a required result was unavailable. Restore access or tools, then run verification again.</p>
+<h3>&ldquo;Last Known Good: not saved&rdquo;</h3>
+<p>This means ReleaseBound could not write the baseline file to your project folder. Choose the project again with &ldquo;Choose Project&hellip;&rdquo;, confirm you can write to that folder, and run verification again. Verification results are still shown in the app.</p>
 <h3>Evidence cannot be produced</h3>
 <p>Check that the project folder is still authorized and accessible and that the disk has free space, then run verification again. If it persists, contact support and describe which gate was involved.</p>
 
 <h2>Privacy and local-first note</h2>
-<p>ReleaseBound is designed to work locally on your Mac. See the <a href="/releasebound-support/privacy/">Privacy Policy</a> for details.</p>
+<p>ReleaseBound is designed to work locally on your Mac. Its own code makes no network requests and does not transmit your project data. It runs Apple developer tools installed on your Mac (such as git and xcodebuild) on the project you choose. See the <a href="/releasebound-support/privacy/">Privacy Policy</a> for details.</p>
 
 <h2>Support contact</h2>
 <p>Email: <a href="mailto:myskyocean2024@gmail.com">myskyocean2024@gmail.com</a><br>

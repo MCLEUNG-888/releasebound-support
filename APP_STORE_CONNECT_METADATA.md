@@ -1,6 +1,7 @@
 # ReleaseBound — App Store Connect Metadata
 
 Copy-ready values for App Store Connect. URLs below were confirmed live over HTTPS after GitHub Pages deployment.
+Claims here match ReleaseBound V1 behavior: no persistent run-by-run history and no drift detection in this version.
 
 ## App Name
 ReleaseBound
@@ -12,9 +13,9 @@ ReleaseBound
 Build with AI. Verify independently. ReleaseBound checks build, tests, signing, packaging and evidence on your Mac, so you know what is truly ready to ship.
 
 ## Keywords (96/100 characters)
-release,verification,AI,build,signing,packaging,evidence,drift,baseline,readiness,Xcode,audit,QA
+release,verification,AI,build,signing,packaging,evidence,baseline,readiness,Xcode,audit,QA,macOS
 
-## Description (2564/4000 characters)
+## Description (2992/4000 characters)
 ```text
 ReleaseBound is independent release verification for AI-built software.
 
@@ -28,16 +29,14 @@ Choose a project, and ReleaseBound identifies the release candidate, runs the re
 WHAT IT VERIFIES
 - Release candidate: verification is tied to a specific candidate of your project.
 - Required gates: build, tests, source state, signing, and packaging.
-- Evidence: the technical results behind each gate are recorded so a verdict can be inspected, not just trusted.
-- Verified baseline: keep a record of a last known verified release to compare against.
-- Drift detection: see when a candidate differs from the verified baseline in ways that matter for release.
-- Verification history: review earlier runs to see how readiness has changed.
+- Evidence: the technical results behind each gate are shown in the app so a verdict can be inspected, not just trusted.
+- Verified baseline: the most recent verified release is recorded as a Last Known Good baseline. ReleaseBound keeps the latest baseline only, not a history of runs.
 
 CLEAR VERDICTS
 Every run ends in an explicit verdict: NOT VERIFIED, READY, NOT READY, or BLOCKED. BLOCKED means a required fact could not be independently confirmed, so ReleaseBound does not report a pass.
 
 LOCAL-FIRST
-ReleaseBound is designed to work locally on your Mac against a project folder you choose. It does not require an account, and it contains no analytics or advertising SDKs. See the Privacy Policy for details.
+ReleaseBound is designed to work locally on your Mac against a project folder you choose. It does not require an account, and it contains no analytics, crash-reporting, or advertising SDKs. ReleaseBound's own code makes no network requests and does not transmit your project data. It runs Apple developer tools installed on your Mac (such as git and xcodebuild) on the project you choose, and it opens web pages such as the ReleaseBound support and legal pages in your browser only when you click a link. Developer tools invoked during verification may write result files, archives, or other build artifacts locally on your Mac. ReleaseBound may write a Verified Release Baseline file to a project folder you have explicitly authorized.
 
 PLATFORM FOCUS
 The initial focus is Apple platform development (macOS and iOS projects). Verification depends on your project type and the developer tools installed on your Mac, so not every verification mode applies to every language or platform.
@@ -60,6 +59,9 @@ Apple Standard EULA: https://www.apple.com/legal/internet-services/itunes/dev/st
 | Privacy Policy URL | https://mcleung-888.github.io/releasebound-support/privacy/ |
 | Terms of Use URL | https://mcleung-888.github.io/releasebound-support/terms/ |
 | EULA | https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ (Apple Standard EULA; no custom EULA) |
+
+## App Privacy: Data Collection
+No data collected. ReleaseBound's own code makes no network requests, contains no analytics, crash-reporting, or advertising SDK, and does not transmit project or personal data.
 
 ## Copyright
 COPYRIGHT_NEEDS_PRODUCT_OWNER_CONFIRMATION
